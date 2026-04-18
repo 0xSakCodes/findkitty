@@ -55,8 +55,8 @@ mascot.addEventListener('click',()=>{
       for(let i=0;i<40;i++) spawnKitty();
       for(let i=0;i<30;i++) spawnStar();
       
-    }, 3200);
-  }, 5000);
+    }, 2200);
+  }, 3200);
 });
 
 // confetti
