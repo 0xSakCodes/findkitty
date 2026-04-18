@@ -41,7 +41,7 @@ mascot.addEventListener('click',()=>{
   fakeWin.style.display='flex';
   for(let i=0;i<40;i++) spawnConfetti();
   setTimeout(()=>{
-    fakeWin.innerHTML = `<div class="big-text">WAIT— NO NO NO 😵‍💫</div>`;
+    fakeWin.innerHTML = `<div class="big-text">Ouhh Nooo! :( 😵‍💫</div>`;
     document.body.classList.add('shake');
     setTimeout(()=>{
       document.body.classList.remove('shake');
@@ -55,8 +55,8 @@ mascot.addEventListener('click',()=>{
       for(let i=0;i<40;i++) spawnKitty();
       for(let i=0;i<30;i++) spawnStar();
       
-    }, 1200);
-  }, 1500);
+    }, 3200);
+  }, 5000);
 });
 
 // confetti
