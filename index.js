@@ -67,11 +67,22 @@ function spawnConfetti() {
 function spawnKitty() {
   const k = document.createElement('div');
   k.className = 'kitty';
-  k.innerText = ['😺','😼','😻','🐾'][Math.floor(Math.random() * 4];
+  k.innerText = ['😺','😼','😻','🐾'][Math.floor(Math.random() * 4)];
   k.style.left = Math.random() * window.innerWidth + 'px';
   k.style.top = Math.random() * window.innerHeight + 'px';
   document.body.appendChild(k);
   setTimeout(() => k.remove(), 5000);
 }
+
+/* spawn bubbles */
+setInterval(() => {
+  const b = document.createElement('div');
+  b.className = 'bubble';
+  b.style.width = (10+Math.random() * 25) + 'px';
+  b.style.height = b.style.width;
+  b.style.left = Math.random() * window.innerWidth + 'px';
+  document.body.appendChild(b);
+  setTimeout(() => b.remove(), 7000);
+}, 350);
 
 setInterval(spawnKitty, 1200);
