@@ -72,7 +72,7 @@ function spawnKitty() {
   k.style.top = Math.random() * window.innerHeight + 'px';
   document.body.appendChild(k);
   setTimeout(() => k.remove(), 5000);
-}
+};
 
 /* spawn bubbles */
 setInterval(() => {
@@ -84,5 +84,15 @@ setInterval(() => {
   document.body.appendChild(b);
   setTimeout(() => b.remove(), 7000);
 }, 350);
+
+/* spawn stars */
+function spawnStar() {
+  const s = document.createElement('div');
+  s.className = 'star';
+  s.style.left = Math.random() * window.innerWidth + 'px';
+  s.style.top = Math.random() * window.innerHeight + 'px';
+  document.body.appendChild(s);
+  setTimeout(() => s.remove(), 4000);
+};
 
 setInterval(spawnKitty, 1200);
