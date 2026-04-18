@@ -15,7 +15,22 @@
       body {
         margin: 0;
         font-family: 'Flamenco', monospace;
+        background: linear-gradient(120deg, #ffdde1, #ee9ca7);
+        overflow: hidden;
+        min-height: 100vh;
+        color: #fff;
       }
+
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 30px;
+        background: linear-gradient(90deg, #ff4fd8, #7c4dff, #00e5ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* containers */
     </style>
   </head>
   <body>
@@ -23,7 +38,7 @@
 
     <div class="mascot-container">
       <img class="mascot" src="">
-      <div class="speech">Find & Tap Me! 😼</div>
+      <div class="speech">Find & Tap Kitty! 😼</div>
     </div>
 
     <div class="cards">
@@ -32,8 +47,16 @@
       <div class="card">🦄 Not Me?</div>
       <div class="card">👽 Uhm :)</div>
     </div>
-    
 
+    <div class="fake-win" id="fakeWin">
+      <img class="win-img" src="">
+      <div class="big-text">No Way!! You Found Me?! 🎉🙀</div>
+    </div>
+    <div class="real-win" id="realWin">
+      <img class="win-img" src="">
+      <div class="big-text">Oh YaY! You Really Found Me!:) 🎉😼</div>
+    </div>
+    
     <!-- scriptings: -->
     <script src="index.js"></script>
   </body>
