@@ -90,8 +90,50 @@
         transform:scale(1.1) rotate(6deg);
       }
 
+      /* screens */
+      .fake-win {
+        position: fixed;
+        inset: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(135deg, #ffb347, #ffcc33);
+        z-index: 50;
+      }
+
+      .real-win {
+        position: fixed;
+        inset: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(135deg, #ff4fd8, #7c4dff, #00e5ff);
+        z-index: 100;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: 0.7s;
+      }
+
+      .real-win.show {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .win-img {
+        width: 220px;
+        border-raidus: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      }
+
+      .big-text {
+        margin-top: 15px;
+        font-size: 1.3rem;
+      }
+
       /* effects: */
-      .kitty, .confetti, .bubble {
+      .kitty, .confetti, .bubble, .star {
         position: absolute;
         pointer-events: none;
       }
@@ -123,6 +165,20 @@
       @keyframes floatUp {
         from {transform:translateY(0); opacity: 0.8}
         to {transform:translateY(-120vh); opacity: 0}
+      }
+
+      /* star */
+      .star {
+        width: 6px;
+        height: 6px;
+        background: yellow;
+        border-radius: 50%;
+        box-shadow:0 0 8px yellow;
+        animation: twinkle 3s infinite alternate;
+      }
+      @keyframes twinkle {
+        from{transfrom:scale(0.5);opacity:0.3}
+        to{transform:scale(1.5);opacity:1}
       }
     </style>
   </head>
