@@ -45,3 +45,20 @@ mascot.addEventListener('click',()=>{
 });
 
 // confetti
+function spawnConfetti() {
+  const c = document.createElement('div');
+  c.className = 'confetti';
+  c.style.left = Math.random() * window.innerWidth + 'px';
+  c.style.top = Math.random() * window.innerHeight + 'px';
+  c.style.background = `hsl(${Math.random() * 360}, 70%,60%)`;
+  document.body.appendChild(c);
+
+  const dx =(Math.random() - 0.5 ) * 200;
+  const dy =(Math.random() - 0.5 ) * 200;
+
+  c.animate([
+    {transform:`translate(0,0)`},
+    {transform:`translate(${dx}px,${dy}px)`}
+  ],{duration:900});
+  setTimeout(() => c.remove(), 900);
+};
