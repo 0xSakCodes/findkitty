@@ -5,6 +5,7 @@ const mascot = document.querySelector(".mascot");
 const cards = document.querySelector('.cards');
 const fakeWin = document.getElementById('fakeWin');
 const realWin = document.getElementById('realWin');
+const speech = document.querySelector('.speech');
 
 let escaped = false;
 let wrongClicks = 0;
