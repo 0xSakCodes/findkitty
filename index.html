@@ -56,7 +56,7 @@
       }
 
       /* speech */
-      speech {
+      .speech {
         position: absolute;
         bottom: 150px;
         background: #fff;
@@ -179,6 +179,17 @@
       @keyframes twinkle {
         from{transfrom:scale(0.5);opacity:0.3}
         to{transform:scale(1.5);opacity:1}
+      }
+
+      .shake {
+        animation: shake 0.4s;
+      }
+      @keyframes shake {
+        0%{transform:translate(0)}
+        25%{transform:translate(5px,-5px)}
+        50%{transform:translate(-5px,5px)}
+        75%{transform:translate(5px,5px)}
+        100%{transform:translate(0)}
       }
     </style>
   </head>
