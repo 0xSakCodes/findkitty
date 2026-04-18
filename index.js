@@ -62,3 +62,16 @@ function spawnConfetti() {
   ],{duration:900});
   setTimeout(() => c.remove(), 900);
 };
+
+/* spawn kitties :> */
+function spawnKitty() {
+  const k = document.createElement('div');
+  k.className = 'kitty';
+  k.innerText = ['😺','😼','😻','🐾'][Math.floor(Math.random() * 4];
+  k.style.left = Math.random() * window.innerWidth + 'px';
+  k.style.top = Math.random() * window.innerHeight + 'px';
+  document.body.appendChild(k);
+  setTimeout(() => k.remove(), 5000);
+}
+
+setInterval(spawnKitty, 1200);
