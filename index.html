@@ -89,6 +89,27 @@
       .card:hover {
         transform:scale(1.1) rotate(6deg);
       }
+
+      /* effects: */
+      .kitty, .confetti {
+        position: absolute;
+        pointer-events: none;
+      }
+      .kitty {
+        font-size: 24px;
+        animtion: kitty 5s linear forwards;
+      }
+      /* kitty animtion */
+      @keyframes kitty {
+        0%{transform:translateY(0)}
+        100%{transform:translateY(-120vh);opacity:0}
+      }
+
+      .confetti {
+        width: 10px;
+        height: 10px;
+        border-raidus: 3px;
+      }
     </style>
   </head>
   <body>
