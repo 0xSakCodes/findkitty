@@ -7,6 +7,14 @@ const fakeWin = document.getElementById('fakeWin');
 const realWin = document.getElementById('realWin');
 
 let escaped = false;
+let wrongClicks = 0;
+
+const quotes = [
+  "Nice Try! 😼",
+  "Skill Issue! +_+",
+  "Really? Cant See Cat?",
+  "Wrong Tap Bud! 😓"
+];
 
 // card clicks:
 document.querySelectorAll('.card').forEach(c=>{
@@ -15,6 +23,12 @@ document.querySelectorAll('.card').forEach(c=>{
 
     setTimeout(() => document.body.classList.remove('shake'), 300);
     spawnConfetti();
+
+    const randomQuote=quotes[Math.floor(Math.random()*quotes.length)];
+    speech.innerText=randomQuote;
+    setTimeout(()=>{
+      speech.innerText="Find The Kitty! 😼";
+    },5000);
   });
 });
 
